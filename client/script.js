@@ -210,3 +210,11 @@
                 }
             });
         }
+ const fileInput = document.getElementById('postImage');
+        const fileInputSpan = fileInput && fileInput.nextElementSibling;
+        if (fileInput && fileInputSpan) {
+            fileInputSpan.style.cursor = 'pointer';
+            fileInputSpan.addEventListener('click', function(e) {
+                fileInput.click();
+            });
+        }
