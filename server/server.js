@@ -26,13 +26,13 @@ const postSchema = new mongoose.Schema({
 const Post = mongoose.model('Post', postSchema);
 
 // Get all posts
-app.get('/api/posts', async (req, res) => {
+app.get('https://zeroshot.onrender.com/api/posts', async (req, res) => {
     const posts = await Post.find().sort({ date: -1 });
     res.json(posts);
 });
 
 // Add a new post
-app.post('/api/posts', async (req, res) => {
+app.post('https://zeroshot.onrender.com/api/posts', async (req, res) => {
     const post = new Post(req.body);
     await post.save();
     res.json(post);
