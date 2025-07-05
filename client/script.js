@@ -1,5 +1,4 @@
-
-        // Theme Management (using in-memory storage for demo)
+// Theme Management (using in-memory storage for demo)
         let currentTheme = 'light';
         
         function toggleTheme() {
@@ -58,7 +57,7 @@
             try {
             const apiUrl = (window.location.hostname === 'localhost')
                 ? 'http://localhost:5000/api/posts'
-                : '/api/posts';
+                : 'https://zeroshot.onrender.com/api/posts';
             const res = await fetch(apiUrl);
             const posts = await res.json();
             posts.forEach(post => {
@@ -133,7 +132,7 @@
             try {
                 const apiUrl = (window.location.hostname === 'localhost')
                     ? 'http://localhost:5000/api/posts'
-                    : '/api/posts';
+                    : 'https://zeroshot.onrender.com/api/posts';
                 const res = await fetch(apiUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -193,3 +192,21 @@
 
         // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', initApp);
+        // Image preview for admin form
+        const postImageInput = document.getElementById('postImage');
+        const imagePreview = document.getElementById('imagePreview');
+        if (postImageInput && imagePreview) {
+            postImageInput.addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (evt) {
+                        imagePreview.src = evt.target.result;
+                        imagePreview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    imagePreview.style.display = 'none';
+                }
+            });
+        }
