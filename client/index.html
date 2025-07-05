@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroShot | Viral AI, Machine Learning, Tech News & Tutorials 2025</title>
+    <meta name="description" content="ZeroShot is the #1 viral blog for trending AI, Machine Learning, Deep Learning, Data Science, and Technology news, tutorials, and guides in 2025. Discover the latest breakthroughs, tools, and viral tech stories.">
+    <meta name="keywords" content="ZeroShot, AI blog, viral AI, trending AI, Machine Learning, Deep Learning, Data Science, Technology, Tech News, AI Tutorials, AI Tools, Artificial Intelligence, GPT-4, ChatGPT, OpenAI, Google Gemini, AI Trends 2025, Best AI Blog, Tech Guides, AI News, AI Ethics, AI Startups, AI Research, AI Applications, AI for Business, AI for Developers, AI for Students, AI for Beginners, AI for Professionals, AI in Healthcare, AI in Finance, AI in Education, AI in Marketing, AI in Robotics, AI in Gaming, AI in Security, AI in Cloud, AI in IoT, AI in Edge, AI in Automation, AI in NLP, AI in Computer Vision, AI in Speech, AI in Recommendation, AI in Search, AI in Social Media, AI in Content Creation, AI in Art, AI in Music, AI in Video, AI in Code, AI in Productivity, AI in SaaS, AI in Startups, AI in Enterprise, AI in Small Business, AI in 2025, Viral Tech, Trending Tech, Tech Blog, Tech Tutorials, Tech Guides, Tech Reviews, Tech Startups, Tech News 2025, Best Tech Blog, Professional AI Blog, Professional Tech Blog, ZeroShot Blog">
+    <meta name="author" content="ZeroShot">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://zeroshot.ai/">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ZeroShot | Viral AI, Machine Learning, Tech News & Tutorials 2025">
+    <meta property="og:description" content="ZeroShot is the #1 viral blog for trending AI, Machine Learning, Deep Learning, Data Science, and Technology news, tutorials, and guides in 2025. Discover the latest breakthroughs, tools, and viral tech stories.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=ZeroShot+Blog">
+    <meta property="og:url" content="https://zeroshot.ai/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ZeroShot">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZeroShot | Viral AI, Machine Learning, Tech News & Tutorials 2025">
+    <meta name="twitter:description" content="ZeroShot is the #1 viral blog for trending AI, Machine Learning, Deep Learning, Data Science, and Technology news, tutorials, and guides in 2025. Discover the latest breakthroughs, tools, and viral tech stories.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=ZeroShot+Blog">
+    <meta name="twitter:site" content="@zeroshot_ai">
+    <meta name="twitter:creator" content="@zeroshot_ai">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 ZeroShot</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" onclick="showPage('admin')">Admin</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page-section active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>ZeroShot Blog</h1>
+                    <p>Your viral source for trending AI, Machine Learning, and Technology news, tutorials, and guides in 2025.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main>
+            <div class="container">
+                <h2 class="section-title">Latest Articles</h2>
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Blog cards will be populated here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Blog Post Detail -->
+    <div id="blogPost" class="page-section">
+        <div class="container">
+            <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+            <article class="blog-post" id="blogPostContent">
+                <!-- Post content will be populated here -->
+            </article>
+        </div>
+    </div>
+
+    <!-- Admin Page -->
+    <div id="admin" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Admin Panel</h2>
+            <form class="admin-form" id="adminForm">
+                <div class="form-group">
+                    <label for="postTitle">Post Title</label>
+                    <input type="text" id="postTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="postDescription">Description</label>
+                    <textarea id="postDescription" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="postImage">Featured Image</label>
+                    <div class="file-input">
+                        <input type="file" id="postImage" name="image" accept="image/*">
+                        <span>Choose Image</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Full Content</label>
+                    <textarea id="postContent" name="content" rows="10" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Publish Post</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ZeroShot. Last updated: <span id="lastUpdated"></span></p>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

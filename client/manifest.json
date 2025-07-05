@@ -1,0 +1,21 @@
+{
+  "name": "ZeroShot Blog",
+  "short_name": "ZeroShot",
+  "description": "ZeroShot is the #1 viral blog for trending AI, Machine Learning, Deep Learning, Data Science, and Technology news, tutorials, and guides in 2025.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/667eea/ffffff?text=🤖",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/667eea/ffffff?text=🤖",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
