@@ -58,7 +58,7 @@
             try {
             const apiUrl = (window.location.hostname === 'localhost')
                 ? 'http://localhost:5000/api/posts'
-                : '/api/posts';
+                : 'https://zeroshot.onrender.com/api/posts';
             const res = await fetch(apiUrl);
             const posts = await res.json();
             posts.forEach(post => {
@@ -133,7 +133,7 @@
             try {
                 const apiUrl = (window.location.hostname === 'localhost')
                     ? 'http://localhost:5000/api/posts'
-                    : '/api/posts';
+                    : 'https://zeroshot.onrender.com/api/posts';
                 const res = await fetch(apiUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
